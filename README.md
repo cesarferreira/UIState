@@ -3,8 +3,8 @@
 > Cleanest way of representing UI state in a flutter widget.
 
 
-Loading             |  Success           |           Failure
-:-------------------------:|:-------------------------:|:----|
+Loading                    |         Success           |           Failure      |
+:-------------------------:|:-------------------------:|:----------------------:|
 ![](extras/spinner.png)  |  ![](extras/success.png) | ![](extras/failure.png)
 
 ## Usage
