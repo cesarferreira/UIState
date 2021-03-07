@@ -9,9 +9,17 @@ Loading             |  Success           |           Failure
 
 ## Usage
 
+Get a live/stream representation of your data:
+
+```dart
+UIState<String> state = Provider.of<ViewModel>(context).state;
+```
+
 Inspired by kotlin's inline switch:
 
 The `when` returns the widget of the current state of your `state` variable
+
+
 
 ```dart
 state.when(
