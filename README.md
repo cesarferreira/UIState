@@ -1,6 +1,6 @@
 # UIState
 
-> Cleanest way of representing UI state in a widget.
+> Cleanest way of representing UI state in a flutter widget.
 
 
 Loading             |  Success           |           Failure
