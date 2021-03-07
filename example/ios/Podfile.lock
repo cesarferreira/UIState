@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - uistate (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - uistate (from `.symlinks/plugins/uistate/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  uistate:
+    :path: ".symlinks/plugins/uistate/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  uistate: a9a674ae9ba071b3d734add26be999b6e758f7dd
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
