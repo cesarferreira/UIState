@@ -1,17 +1,17 @@
 # UIState
 
-> A way of representing UI State in an app
+> Cleanest way of representing UI state in a widget.
 
 
 Loading             |  Success           |           Failure
 :-------------------------:|:-------------------------:|:----|
 ![](extras/spinner.png)  |  ![](extras/success.png) | ![](extras/failure.png)
 
-## Usage example
+## Usage
 
+Inspired by kotlin's inline switch:
 
-## On your Screen:
-Copying kotlin's way of doing an inline switch:
+The `when` returns the widget of the current state of your `state` variable
 
 ```dart
 state.when(
@@ -22,7 +22,7 @@ state.when(
 ```
 
 
-## Full screen example:
+## `build` method example:
 
 ```dart
 @override
@@ -52,7 +52,9 @@ state.when(
 
 
 
-## View Model example
+## The `ChangeNotifier` (ViewModel) side of it
+
+The `state` variable will assume the loading/failure/success state of the data request:
 
 ```dart
 class ViewModel extends ChangeNotifier {

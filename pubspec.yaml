@@ -1,5 +1,5 @@
 name: uistate
-description: A way of representing UIState in any widget
+description: Cleanest way of representing UIState in a widget.
 version: 0.0.1
 author: 'cesar ferreira'
 homepage: 'https://cesarferreira.com'
