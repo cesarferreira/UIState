@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
           child: state.when(
             success: (event) => successWidget(event.value),
             failure: (event) => failureWidget(event.errorMessage),
-            loading: (event) => CircularProgressIndicator(),
+            loading: (event) => loadingSpinner(),
           ),
         ),
       ),
@@ -55,6 +55,8 @@ class MyHomePage extends StatelessWidget {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+  CircularProgressIndicator loadingSpinner() => CircularProgressIndicator();
 
   final style = const TextStyle(fontSize: 30, color: Colors.white);
 
