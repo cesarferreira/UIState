@@ -84,6 +84,14 @@ class ViewModel extends ChangeNotifier {
 }
 ```
 
+## Install
+
+```yml
+dependencies:
+  uistate: ^0.0.1
+```
+
+or follow [these](https://pub.dev/packages/uistate/install) steps
 
 ---------------------
 
