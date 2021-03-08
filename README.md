@@ -96,4 +96,4 @@ or follow [these](https://pub.dev/packages/uistate/install) steps
 ---------------------
 
 
-Made with ♥ by [Cesar Ferreira](http://cesarferreira.com)
+Made with ♥ by [Cesar Ferreira](https://cesarferreira.com)
