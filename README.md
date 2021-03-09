@@ -5,7 +5,7 @@
 
 Loading                    |         Success           |           Failure      |
 :-------------------------:|:-------------------------:|:----------------------:|
-![](extras/spinner.png)  |  ![](extras/success.png) | ![](extras/failure.png)
+![](https://github.com/cesarferreira/UIState/raw/master/extras/spinner.png)  |  ![](https://github.com/cesarferreira/UIState/raw/master/extras/success.png) | ![](https://github.com/cesarferreira/UIState/raw/master/extras/failure.png)
 
 ## Usage
 
@@ -89,6 +89,11 @@ class ViewModel extends ChangeNotifier {
 ```yml
 dependencies:
   uistate: ^0.0.1
+```
+
+The import:
+```dart
+import 'package:uistate/uistate.dart';
 ```
 
 or follow [these](https://pub.dev/packages/uistate/install) steps
