@@ -88,7 +88,7 @@ class ViewModel extends ChangeNotifier {
 
 ```yml
 dependencies:
-  uistate: ^1.0.2
+  uistate: ^1.0.3
 ```
 
 The import:
