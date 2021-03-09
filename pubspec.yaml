@@ -29,4 +29,6 @@ flutter:
         pluginClass: UistatePlugin
       ios:
         pluginClass: UistatePlugin
+      web:
+        pluginClass: UistatePlugin
 
