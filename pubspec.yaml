@@ -1,6 +1,6 @@
 name: uistate
-description: Cleanest way of representing UIState in a flutter widget.
-version: 0.0.1
+description: The cleanest way of representing UIState in a flutter widget.
+version: 1.0.0
 homepage: 'https://cesarferreira.com'
 
 environment:
