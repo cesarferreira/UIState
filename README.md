@@ -86,17 +86,11 @@ class ViewModel extends ChangeNotifier {
 
 ## Install
 
-```yml
-dependencies:
-  uistate: ^1.0.4
+```sh
+flutter pub add uistate
 ```
 
-The import:
-```dart
-import 'package:uistate/uistate.dart';
-```
-
-or follow [these](https://pub.dev/packages/uistate/install) steps
+as explained: on these [steps](https://pub.dev/packages/uistate/install)
 
 ---------------------
 

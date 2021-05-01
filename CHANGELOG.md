@@ -1,3 +1,6 @@
+## 1.0.5
+
+* minor tweaks.
 ## 1.0.4
 
 * minor tweaks.
