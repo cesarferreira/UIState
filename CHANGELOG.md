@@ -1,3 +1,7 @@
+## 1.0.7
+
+* null safety.
+
 ## 1.0.5
 
 * minor tweaks.
