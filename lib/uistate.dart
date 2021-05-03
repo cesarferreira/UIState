@@ -20,9 +20,9 @@ class Loading<T> extends UIState<T> {}
 
 class SealedResult<T> {
   R when<R>({
-    @required R Function(Success<T>) success,
-    @required R Function(Failure<T>) failure,
-    @required R Function(Loading<T>) loading,
+    required R Function(Success<T>) success,
+    required R Function(Failure<T>) failure,
+    required R Function(Loading<T>) loading,
   }) {
     if (this is Success<T>) {
       return success(this as Success<T>);
