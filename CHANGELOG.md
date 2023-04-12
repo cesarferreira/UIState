@@ -1,4 +1,8 @@
-## 1.0.7
+## 1.0.8
+
+* added dart docs
+  
+* ## 1.0.7
 
 * null safety.
 

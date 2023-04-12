@@ -23,9 +23,9 @@ The `when` returns the widget of the current state of your `state` variable
 
 ```dart
 state.when(
-    success: (event) => successWidget(event.value),
-    failure: (event) => failureWidget(event.errorMessage),
-    loading: (event) => loadingSpinner(),
+    success: (event) => Text(event.value),
+    failure: (event) => Text('Error: ${event.errorMessage}'),
+    loading: (event) => CircularProgressIndicator(),
 )
 ```
 
@@ -42,9 +42,9 @@ state.when(
         margin: EdgeInsets.all(20),
         child: Center(
           child: state.when(
-            success: (event) => successWidget(event.value),
-            failure: (event) => failureWidget(event.errorMessage),
-            loading: (event) => loadingSpinner(),
+            success: (event) => Text(event.value),
+            failure: (event) => Text('Error: ${event.errorMessage}'),
+            loading: (event) => CircularProgressIndicator(),
           ),
         ),
       ),
