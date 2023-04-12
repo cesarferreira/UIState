@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:uistate/uistate.dart';
+// import 'package:uistate/uistate.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('uistate');
@@ -18,6 +18,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    // expect(await Uistate.platformVersion, '42');
+    // expect(await UIState.platformVersion, '42');
   });
 }
