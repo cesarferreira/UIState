@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.1.5">
+  <meta name="description" content="uistate API docs, for the Dart programming language.">
+  <title>uistate - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/cesarferreira/UIState">uistate package</a></li>
+  </ol>
+  <div class="self-name">uistate</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="uistate">UIState</h1>
+<blockquote>
+<p>Cleanest way of representing UI state in a flutter widget.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Loading</th>
+<th align="center">Success</th>
+<th align="center">Failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://github.com/cesarferreira/UIState/raw/master/extras/spinner.png" alt=""></td>
+<td align="center"><img src="https://github.com/cesarferreira/UIState/raw/master/extras/success.png" alt=""></td>
+<td align="center"><img src="https://github.com/cesarferreira/UIState/raw/master/extras/failure.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<p>Get a live/stream representation of your data:</p>
+<pre class="language-dart"><code class="language-dart">UIState&lt;String&gt; state = Provider.of&lt;ViewModel&gt;(context).state;
+</code></pre>
+<p>Inspired by kotlin's inline switch:</p>
+<p>The <code>when</code> returns the widget of the current state of your <code>state</code> variable</p>
+<pre class="language-dart"><code class="language-dart">state.when(
+    success: (event) =&gt; successWidget(event.value),
+    failure: (event) =&gt; failureWidget(event.errorMessage),
+    loading: (event) =&gt; loadingSpinner(),
+)
+</code></pre>
+<h2 id="build-method-example"><code>build</code> method example:</h2>
+<pre class="language-dart"><code class="language-dart">@override
+  Widget build(BuildContext context) {
+    UIState&lt;String&gt; state = Provider.of&lt;ViewModel&gt;(context).state;
+
+    return Scaffold(
+      body: Container(
+        margin: EdgeInsets.all(20),
+        child: Center(
+          child: state.when(
+            success: (event) =&gt; successWidget(event.value),
+            failure: (event) =&gt; failureWidget(event.errorMessage),
+            loading: (event) =&gt; loadingSpinner(),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.adjust_sharp),
+        onPressed: () {
+          Provider.of&lt;ViewModel&gt;(context, listen: false).fetchUser();
+        },
+      ),
+    );
+  }
+</code></pre>
+<h2 id="the-changenotifier-viewmodel-side-of-it">The <code>ChangeNotifier</code> (ViewModel) side of it</h2>
+<p>The <code>state</code> variable will assume the loading/failure/success state of the data request:</p>
+<pre class="language-dart"><code class="language-dart">class ViewModel extends ChangeNotifier {
+  final UsernameRepository repository;
+  ViewModel(this.repository);
+
+  UIState&lt;String&gt; state = Loading();
+
+  fetchUser() async {
+    try {
+      String username = await repository.getUsername();
+      state = Success(username);
+    } catch (error) {
+      state = Failure(error.toString());
+    }
+
+    notifyListeners();
+  }
+}
+</code></pre>
+<h2 id="install">Install</h2>
+<pre class="language-sh"><code class="language-sh">flutter pub add uistate
+</code></pre>
+<p>as explained: on these <a href="https://pub.dev/packages/uistate/install">steps</a></p>
+<hr>
+<p>Made with ♥ by <a href="https://cesarferreira.com">Cesar Ferreira</a></p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="uistate">
+  <span class="name"><a href="file-___Users_cesarferreira_code_sideprojects_UIState_lib_uistate/file-___Users_cesarferreira_code_sideprojects_UIState_lib_uistate-library.html">uistate</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/cesarferreira/UIState">uistate package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">uistate</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="file-___Users_cesarferreira_code_sideprojects_UIState_lib_uistate/file-___Users_cesarferreira_code_sideprojects_UIState_lib_uistate-library.html">uistate</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    uistate
+      1.0.7
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
